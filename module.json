@@ -1,0 +1,36 @@
+{
+  "id": "cpr-hud-pneuma-bridge",
+  "title": "CPR Combat HUD - Pneuma Combat Tools Bridge",
+  "description": "Routes supported, targeted weapon attacks from CPR Combat HUD through Pneuma Combat Tools.",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Local integration"
+    }
+  ],
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "cyberpunk-red-core",
+        "type": "system"
+      }
+    ],
+    "requires": [
+      {
+        "id": "cpr-combat-hud",
+        "type": "module"
+      },
+      {
+        "id": "pneuma-combattools",
+        "type": "module"
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ]
+}
