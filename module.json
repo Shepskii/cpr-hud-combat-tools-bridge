@@ -2,7 +2,7 @@
   "id": "cpr-hud-pneuma-bridge",
   "title": "CPR Combat HUD - Pneuma Combat Tools Bridge",
   "description": "Routes supported weapon attacks from CPR Combat HUD through Pneuma Combat Tools.",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "authors": [
     {
       "name": "Shepskii"
