@@ -55,14 +55,31 @@ async function routeHudAttack(wrapped, event) {
     const attacker = selectedAttacker(this, actor);
     if (!attacker) return wrapped(event);
 
-    const targetMode = game.settings.get(HUD_ID, "targetMode");
     const currentTargets = () => Array.from(game.user.targets ?? []);
+    const areaAttack = entry.area || mode === "suppressive";
+    const targetlessAreaAttack = areaAttack && currentTargets().length === 0;
+    const targetMode = game.settings.get(HUD_ID, "targetMode");
     const shouldPick =
-      targetMode === "always" || (targetMode === "ifNone" && currentTargets().length === 0);
+      !targetlessAreaAttack &&
+      (targetMode === "always" || (targetMode === "ifNone" && currentTargets().length === 0));
 
     if (shouldPick && !(await targeting.resolveAttackTarget())) return;
 
     const targets = currentTargets();
+    if (targetlessAreaAttack && targets.length === 0) {
+      if (!attacker.isVisible) return wrapped(event);
+
+      event.preventDefault();
+      try {
+        await attacks.attackFromHUD(attacker, attacker, itemId, mode, {
+          shiftKey: !!(event.ctrlKey || event.metaKey),
+        });
+      } finally {
+        attacker.setTarget(false);
+      }
+      return;
+    }
+
     if (targets.length !== 1) return wrapped(event);
 
     const target = targets[0];
