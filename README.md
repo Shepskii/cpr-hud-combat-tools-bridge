@@ -6,8 +6,8 @@ This Foundry VTT module routes supported weapon attacks started from CPR Combat 
 
 - Foundry VTT v12
 - Cyberpunk RED Core
-- CPR Combat HUD
-- Pneuma's Combat Tools
+- [CPR Combat HUD](https://github.com/Vec97/cpr-combat-hud)
+- [Pneuma's Combat Tools](https://github.com/GMPneuma/PneumaCombatTools)
 - libWrapper (required by Pneuma's Combat Tools)
 
 Install this folder as `Data/modules/cpr-hud-pneuma-bridge` and enable it with the other modules. No changes to either upstream module are needed.
