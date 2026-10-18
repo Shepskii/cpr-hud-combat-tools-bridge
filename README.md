@@ -4,7 +4,11 @@ This Foundry VTT module routes supported weapon attacks started from CPR Combat 
 
 ## Installation
 
-Install this folder as `Data/modules/cpr-hud-pneuma-bridge` and enable it with the other modules.
+Unzip the release folder to the `Data\Modules` folder in your Foundry instance - `Data/modules/cpr-hud-pneuma-bridge`. Enable the module .
+
+Or install through Foundry with the manifest: https://github.com/Shepskii/cpr-hud-pneuma-bridge/releases/latest/download/module.json
+
+While loaded in your World, enable CPR Combat HUD - Pneuma Combat Tools Bridge in the Module Management.
 
 ## Requirements
 
