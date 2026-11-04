@@ -29,3 +29,9 @@ Unsupported attacks and other attacks without one unambiguous target continue th
 ## Unofficial Content
 
 CPR Combat HUD - Pneuma Combat Tools Bridge is unofficial content provided under the Homebrew Content Policy of R. Talsorian Games and is not approved or endorsed by RTG. This content references materials that are the property of R. Talsorian Games and its licensees.
+
+## License
+
+Copyright (c) 2026 Shepskii. Licensed under the [Mozilla Public License 2.0](LICENSE). Versions up to and including 0.1.1 were released under the MIT License and stay available under it.
+
+This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.
